@@ -34,9 +34,9 @@ drc_all_warnings.json
 *.ses
 temp-freerouting.dsn
 
-# Heavy 3D CAD exchange models (host on GitHub Releases if needed)
-*.step
-*.stp
+# Heavy KiCad 3D board export (host on GitHub Releases if needed)
+hardware/schematic/ZAIR/*.step
+hardware/schematic/ZAIR/*.stp
 
 # Exclude mechanical 3D CAD folder (tracking strictly PCB files)
 hardware/3d/

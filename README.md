@@ -53,3 +53,19 @@ Designed in KiCad.
 - **Schematic PDF:** [`hardware/schematic/ZAIR/ZAIR_Schematic.pdf`](hardware/schematic/ZAIR/ZAIR_Schematic.pdf)
 - **Gerbers:** [`hardware/schematic/ZAIR/gerbers/`](hardware/schematic/ZAIR/gerbers/)
 - **BOM:** [`hardware/schematic/ZAIR/ZAIR.csv`](hardware/schematic/ZAIR/ZAIR.csv)
+
+---
+
+## ⚙️ Drivetrain CAD
+
+Designed in Onshape. A 3-gear direct-drive setup where the central Coreless 1718 motor pinion meshes simultaneously with both geared wheels.
+
+|                     3-Gear Mesh                     |                   Drivetrain Assembly                   |
+| :-------------------------------------------------: | :-----------------------------------------------------: |
+| <img src="assets/drivetrain_mesh.png" width="380"/> | <img src="assets/drivetrain_assembly.png" width="380"/> |
+
+### STEP Models (`hardware/cad/`)
+
+- **Motor:** Coreless 1718 ([`hardware/cad/motor_1718.step`](hardware/cad/motor_1718.step))
+- **Wheel:** 22mm Geared Wheel ([`hardware/cad/geared_wheel.step`](hardware/cad/geared_wheel.step))
+- **Mount:** Drivetrain motor mount bracket ([`hardware/cad/drivetrain_mount.step`](hardware/cad/drivetrain_mount.step))
