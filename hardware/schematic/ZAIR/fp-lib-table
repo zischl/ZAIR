@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "ZAIR")(type "KiCad")(uri "${KIPRJMOD}/ZAIR.pretty")(options "")(descr "Project custom breakout footprints"))
+)

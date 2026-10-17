@@ -1,0 +1,105 @@
+
+(rules PCB ZAIR.dsn
+  (snap_angle 
+    fortyfive_degree
+  )
+  (rule
+    (width 200.0)
+    (clearance 200.0)
+    (clearance 100.0 (type smd_to_turn_gap))
+    (clearance 50.0 (type smd))
+    (clearance 200.0 (type "Power_Battery"))
+    (clearance 200.0 (type "Power_Motors"))
+    (clearance 200.0 (type "Power_3V3"))
+    (clearance 500.0 (type "board_edge"))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-Power_Battery" "Via[0-1]_600:300_um" "Power_Battery"
+  )
+  (via 
+    "Via[0-1]_600:300_um-Power_Motors" "Via[0-1]_600:300_um" "Power_Motors"
+  )
+  (via 
+    "Via[0-1]_600:300_um-Power_3V3" "Via[0-1]_600:300_um" "Power_3V3"
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "Power_Battery"
+  )
+  (via_rule
+    "Power_Motors"
+  )
+  (via_rule
+    "Power_3V3" "Via[0-1]_600:300_um-Power_3V3"
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (class default
+    /GND "Net-(D4-K)" "Net-(Q9-D)" "/IMU_SCK" "/IMU_SDI" "/IMU_CS" "/IMU_SDO" "unconnected-(U2-NC-Pad7)"
+    "unconnected-(U2-INT2-Pad8)" "/IMU_INT1" "unconnected-(U2-SCX-Pad10)" "unconnected-(U2-SDX-Pad11)" "unconnected-(U2-NC2-Pad12)" "Net-(D6-K)" "/IR_DIAG_EN" "/IR_FL"
+    /VDDA "Net-(D5-K)" "/VFAN_PWM" /BOOT0 "/USER_BTN" "unconnected-(U1-PC14-Pad3)" "unconnected-(U1-PC15-Pad4)" "/OSC_IN"
+    "/OSC_OUT" /NRST "/IR_FR" "/IR_L" "/IR_R" "/ENC1_SCL" "/ENC1_SDA" "/VBAT_SENSE"
+    "/TB_STBY" "/USER_LED" "/ENC2_SCL" "/ENC2_SDA" "/IR_DL" "/IR_DR" /PWMA /PWMB
+    "unconnected-(U1-PB2-Pad28)" "unconnected-(U1-PB11-Pad30)" /VCAP1 /AIN1 /AIN2 /BIN1 /BIN2 "unconnected-(U1-PA8-Pad41)"
+    "/USART1_TX" "/USART1_RX" "unconnected-(U1-PA11{slash}USB_DM-Pad44)" "unconnected-(U1-PA12{slash}USB_DP-Pad45)" /SWDIO /VCAP2 /SWDCK "unconnected-(U1-PA15-Pad50)"
+    "/IR_FRONT_EN" "/IR_SIDE_EN" "unconnected-(U1-PD2-Pad54)" /SWO "unconnected-(U1-PB4-Pad56)" "unconnected-(U1-PB5-Pad57)" "unconnected-(U1-PB6-Pad58)" "unconnected-(U1-PB7-Pad59)"
+    "unconnected-(U1-PB8-Pad61)" "unconnected-(U1-PB9-Pad62)" "Net-(D3-K)" "Net-(Q8-D)" "Net-(D2-K)" "Net-(D1-K)" "unconnected-(U3-Analog{slash}PWM-Pad3)" "Net-(D7-K)"
+    "Net-(Q10-D)" "unconnected-(U4-Analog{slash}PWM-Pad3)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Power_Battery"
+    "/VBAT_F"
+    (clearance_class "Power_Battery")
+    (via_rule "Power_Battery")
+    (rule
+      (width 600.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Power_Motors"
+    "/MOT_BO1" "/MOT_BO2" "/VFAN_3V5" "/VAC_MOTOR-" "/MOT_AO1" "/MOT_AO2"
+    (clearance_class "Power_Motors")
+    (via_rule "Power_Motors")
+    (rule
+      (width 450.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Power_3V3"
+    /+3V3
+    (clearance_class "Power_3V3")
+    (via_rule "Power_3V3")
+    (rule
+      (width 300.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

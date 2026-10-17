@@ -1,0 +1,64 @@
+# ========================================================
+# Gitignore for ZAIR PCB Hardware Project (KiCad 8)
+# ========================================================
+
+# KiCad user-specific project preferences (window positions, layer visibility)
+*.kicad_prl
+*.kicad_prl-bak
+ZAIBFB9.kicad_prl
+
+# KiCad backup files & autosaves
+*.bak
+*.kicad_pcb.bak
+*.kicad_pcb-bak
+*.kicad_sch.bak
+*.kicad_sch-bak
+*-save.kicad_pcb
+*-save.kicad_sch
+_autosave-*
+*.lck
+
+# Backup directories and undo history
+**/backup/
+**/.history/
+
+# Design Rule Check (DRC) & electrical reports
+drc_*.json
+drc_all_warnings.json
+*.rpt
+*.drc
+*.wbk
+
+# Auto-router temporary files (Freerouting / Specctra)
+*.dsn
+*.ses
+temp-freerouting.dsn
+
+# Heavy 3D CAD exchange models (host on GitHub Releases if needed)
+*.step
+*.stp
+
+# Exclude mechanical 3D CAD folder (tracking strictly PCB files)
+hardware/3d/
+
+# Unready internal documentation drafts
+micromouse_build_plan.md
+motor_selection_rationale.md
+
+# Intermediate / Old Gerber exports & duplicate CAD exports
+**/Gerber/
+**/dxf_out/
+**/ZAIR_Chassis_Outline.dxf/
+**/ZAIR_Gerbers_Y3/
+**/ZAIR_Gerbers_Y3.zip
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE artifacts
+.vscode/
+.idea/
+*.swp
+*~
